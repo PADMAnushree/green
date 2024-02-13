@@ -1,0 +1,100 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background: url("images/background/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.span {
+    margin: 8px 0;
+}
+
+#navbar {
+    background-color: rgba(211, 214, 210, 0.708);
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+
+
+
+#heading {
+    display: inline-block;
+    font-size: 2rem;
+    color: #1B6B93;
+
+}
+
+#paraCon {
+    width: 60%;
+
+}
+
+#anchorContain {
+    float: right;
+
+}
+
+.navigate {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #1B6B93;
+    margin: 0 12px;
+    background-color: rgba(211, 214, 210, 0.708);
+    border: 2px solid rgba(211, 214, 210, 0.708);
+    border-radius: 15px;
+    padding: 0 4px;
+}
+
+.navigate:hover {
+    background-color: white;
+
+}
+
+#subhead {
+    font-size: 3.75rem;
+    color: white;
+    position: absolute;
+    left: 38px;
+    top: 111px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#paragraph {
+    color: white;
+    display: inline;
+    position: absolute;
+    top: 200px;
+    width: 60%;
+    left: 38px;
+    font-size: 1.5rem;
+}
+
+#footer {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    position: absolute;
+    padding-top: 5px;
+    top: 86%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.footCon {
+    display: inline-block;
+    height: 80px;
+    width: 100px;
+    margin: 10px 8.75rem;
+}

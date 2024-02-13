@@ -1,0 +1,105 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+
+}
+
+.contain {
+    display: inline-block;
+    width: 9.5rem;
+    padding: 10px;
+    background-color: rgba(254, 255, 244, 0.829);
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+
+
+.image {
+    display: inline-block;
+    width: 9rem;
+    margin: 3px;
+}
+
+body {
+    background: url("images/background/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.span {
+    margin: 8px 0;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.para {
+    font-size: 1rem;
+}
+
+#navbar {
+    background-color: rgba(210, 214, 211, 0.708);
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+
+#heading {
+    display: inline-block;
+    font-size: 2rem;
+    color: #1B6B93;
+
+}
+
+
+
+
+#anchorContain {
+
+    float: right;
+
+}
+
+.navigate {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #1B6B93;
+    margin: 0 12px;
+    background-color: rgba(211, 214, 210, 0.708);
+    border: 2px solid rgba(211, 214, 210, 0.708);
+    border-radius: 15px;
+    padding: 0 4px;
+}
+
+.navigate:hover {
+    background-color: white;
+
+}
+
+#subhead {
+    font-size: 3.75rem;
+    color: white;
+    position: absolute;
+    left: 38px;
+    top: 111px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+.center {
+    margin-left: 22px;
+}
