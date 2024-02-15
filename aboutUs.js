@@ -85,7 +85,6 @@ onAuthStateChanged(auth, (user) => {
 onAuthStateChanged(auth, (user) => {
     if (user) {
         var userId = user.uid;
-        console.log(userId)
         get(child(dbRef, `OrderedItems/${userId}`)).then((snapshot) => {
             if (snapshot.exists()) {
                 var orderedItemsDiv = document.getElementById('orderedItems');
@@ -105,17 +104,26 @@ onAuthStateChanged(auth, (user) => {
 
                         // Create a div to display each ordered item
                         var itemDiv = document.createElement('div');
-                        itemDiv.innerHTML = '<p>Product Name: ' + productName + '</p>' +
-                            '<p>Price: ' + price + '</p>' +
-                            '<p>Quantity: ' + quantity + '</p>';
+                        itemDiv.className = "item"
+                        itemDiv.innerHTML = `<img src="images/product1/l1.png" class="image" alt="Product 1">
+                            <div class="item-info">
+                                <p>Product Name: ${productName}</p>
+                                <p>Price: ${price}</p>
+                                <p>Quantity:${quantity}</p>
+                            </div>`
 
                         orderedItemsDiv.appendChild(itemDiv);
                     });
                 } else {
-                    console.log("No data available");
+                    console.log("No data available1");
                 }
             } else {
-                console.log("No data available");
+                var orderedItemsDiv = document.getElementById('orderedItems');
+                orderedItemsDiv.innerHTML = `<h2>Ordered Items</h2>
+                    <div class="item" >
+                        <p>No Orders Yet</p>
+                    </div>`
+
             }
         }).catch(error => {
             console.error("Error getting data:", error);
