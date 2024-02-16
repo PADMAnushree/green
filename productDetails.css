@@ -104,13 +104,13 @@ body {
     margin-left: 22px;
 }
 #b1{
-    background-color:rgb(111, 158, 111);
+    background-color:rgb(79, 126, 10);
     font-size: 20px;
+    color: whitesmoke;
     text-align: center;
     border: none;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
     width:70%;
-
 }
