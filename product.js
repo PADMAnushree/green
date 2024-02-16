@@ -1,7 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-// Your web app's Firebase configuration
-const firebaseConfig = {
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"; const firebaseConfig = {
     apiKey: "AIzaSyBseO1ACT2nkXVAGz6ie2Xp2VsaHPvPGHE",
     authDomain: "greengroove-1c7bb.firebaseapp.com",
     databaseURL: "https://greengroove-1c7bb-default-rtdb.firebaseio.com",
@@ -21,6 +19,7 @@ onAuthStateChanged(auth, (user) => {
             { text: 'Home', href: 'index.html', id: '' },
             { text: 'Products', href: 'product.html', id: '' },
             { text: 'About', href: 'aboutUs.html', id: '' },
+            { text: 'Order', href: 'orderForm.html', id: '' }
         ];
 
         links.forEach(link => {

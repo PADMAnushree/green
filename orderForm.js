@@ -1,8 +1,6 @@
-// https://firebase.google.com/docs/web/setup#available-libraries
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBseO1ACT2nkXVAGz6ie2Xp2VsaHPvPGHE",
     authDomain: "greengroove-1c7bb.firebaseapp.com",
@@ -13,9 +11,9 @@ const firebaseConfig = {
     appId: "1:1098071047805:web:58fd9e6db9ce7eddb63b14"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
 
 
 document.getElementById('product').addEventListener('change', function () {
@@ -34,9 +32,7 @@ function calculateTotalPrice() {
     document.getElementById('totalPrice').textContent = 'INR' + totalPrice.toFixed(2);
 }
 
-// Function to get price per unit based on selected product
 function getPricePerUnit(product) {
-    // You can implement logic to fetch price per unit from a database or use hardcoded values
     switch (product) {
         case 'Regular Plates':
             return 500.00;
@@ -73,7 +69,6 @@ function getPricePerUnit(product) {
     }
 }
 
-// Calculate and display total price on page load
 calculateTotalPrice();
 const submit = document.getElementById('submit');
 submit.addEventListener('click', (event) => {
@@ -90,29 +85,21 @@ submit.addEventListener('click', (event) => {
 
             const db = getDatabase();
             const orderedItemsRef = ref(db, 'OrderedItems/' + user.uid + '/OrderedItem');
-            // push(orderedItemsRef, {
-            //     product: product,
-            //     quantity: quantity,
-            //     totalPrice: totalPrice
-            // })
             set(orderedItemsRef, {
                 product: product,
                 quantity: quantity,
                 price: totalPrice,
             }).then(() => {
-                console.log("Successfully Saved");
+                alert("Order Successfully Placed");
             }).catch((error) => {
                 console.error("Error saving data:", error);
             });
-            // ...
         } else {
-            // User is signed out
-            // ...
+            window.location.href = 'login.html'
         }
     });
 
 
-    // Assuming you have already defined product, quantity, and totalPrice
 
 });
 
