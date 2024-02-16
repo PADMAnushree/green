@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Description</title>
     <link rel="stylesheet" href="productDetails.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .underline {
             text-decoration: underline;
@@ -35,7 +36,7 @@
                 <span class="span">Partiton Plates</span>
                 <p class="para">12"inch<br>Round Shape<br>disposable</p>
                 <span class="span center">1000Rs</span>
-                <button id="b1" >Order</button>
+                <button id="b1">Order</button>
 
             </div>
             <div class="contain">
@@ -51,7 +52,7 @@
                 <span class="span">Bowls</span>
                 <p class="para">Round Shape<br>disposable</p>
                 <span class="span center">400Rs</span>
-                <button id="b1" >Order</button>
+                <button id="b1">Order</button>
 
             </div>
             <div class="contain">
@@ -67,6 +68,12 @@
         </div>
 
     </section>
+    <script>
+        const btn = document.getElementById('b1')
+        btn.addEventListener("click", () => {
+            window.location.href = "orderForm.html"
+        })
+    </script>
     <script type="module" src="productDetails.js"></script>
 
 </body>

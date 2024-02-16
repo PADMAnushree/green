@@ -99,7 +99,7 @@ onAuthStateChanged(auth, (user) => {
                 // Check if data is not null
                 if (data) {
                     Object.values(data).forEach(order => {
-                        var productName = order.productName;
+                        var productName = order.product;
                         var price = order.price;
                         var quantity = order.quantity;
 
