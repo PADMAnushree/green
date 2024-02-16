@@ -25,6 +25,7 @@ onAuthStateChanged(auth, (user) => {
       { text: 'Home', href: 'index.html', id: '' },
       { text: 'Products', href: 'product.html', id: '' },
       { text: 'About', href: 'aboutUs.html', id: '' },
+      { text: 'Order', href: 'orderForm.html', id: '' }
     ];
 
     // Create anchor tags and append them to the navigation div

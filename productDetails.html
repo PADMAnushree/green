@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Description</title>
     <link rel="stylesheet" href="productDetails.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .underline {
             text-decoration: underline;
@@ -30,14 +31,12 @@
                 <p class="para">10"inch<br>Round Shape<br>disposable</p>
                 <span class="span center">300rs</span>
                 <br><br>
-                <button id="b1">Order</button>
             </div>
             <div class="contain">
                 <img class="image" src="images/Leaf Partition Plates.png" style="position: relative;bottom: 5px;"/>
                 <span class="span">Partiton Plate</span>
                 <p class="para">12"inch<br>Round Shape<br>disposable</p>
                 <span class="span center">500Rs</span>
-                <button id="b1" >Order</button>
 
             </div>
             <div class="contain">
@@ -46,16 +45,13 @@
                 <span class="span">Plates & bowl</span>
                 <p class="para">12"inch & 5"inch<br>Round Shape<br>disposable</p>
                 <span class="span center">1500rs</span>
-                <button id="b1">Order</button>
 
             </div>
             <div class="contain">
                 <img class="image" src="images/Bowls.png" style="position: relative;bottom: 10px;" />
                 <span class="span">Bowls</span>
                 <p class="para">Round Shape<br>disposable</p>
-                <span class="span center">300Rs</span>
-                <br><br>
-                <button id="b1" >Order</button>
+                <span class="span center">400Rs</span>
 
             </div>
             <div class="contain">
@@ -63,7 +59,6 @@
                 <span class="span">Paper Plates</span>
                 <p class="para">12"inch<br>Round Shape<br>disposable</p>
                 <span class="span center">800rs</span>
-                <button id="b1">Order</button>
 
             </div>
 
@@ -71,8 +66,15 @@
         </div>
 
     </section>
+    <script>
+        const btn = document.getElementById('b1')
+        btn.addEventListener("click", () => {
+            window.location.href = "orderForm.html"
+        })
+    </script>
     <script type="module" src="productDetails.js"></script>
 
 </body>
+
 
 </html>

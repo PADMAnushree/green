@@ -32,6 +32,13 @@
             margin-bottom: 30px;
         }
 
+        .profile1 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            justify-content: space-between;
+        }
+
         .profile img {
             width: 80px;
             height: 80px;
@@ -69,6 +76,16 @@
         .item-info {
             font-size: 16px;
         }
+
+        #logout {
+            padding: 8px;
+            background-color: rgb(120, 234, 120);
+            color: white;
+            font-size: large;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -82,18 +99,21 @@
         </div>
     </header>
     <div class="container1">
-        <div class="profile">
-            <img src="images/Profile.jpg" alt="Profile Picture">
-            <div class="profile-info">
-                <p id="uname">Name:</p>
-                <p id="uemail">Email:</p>
+
+        <div class="profile1">
+            <div class="profile">
+                <img src="images/Profile.jpg" alt="Profile Picture">
+                <div class="profile-info">
+                    <p id="uname">Name:</p>
+                    <p id="uemail">Email:</p>
+                </div>
             </div>
+            <div id="right"><button id="logout">Log Out</button></div>
         </div>
         <div class="ordered-items" id="orderedItems">
             <h2>Ordered Items</h2>
 
 
-            <!-- Add more items as needed -->
         </div>
     </div>
     <script type="module" src="aboutUs.js"></script>

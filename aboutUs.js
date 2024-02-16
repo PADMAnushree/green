@@ -55,7 +55,8 @@ onAuthStateChanged(auth, (user) => {
             else anchor.className = 'navigate';
 
             navDiv.appendChild(anchor);
-        });
+        })
+
 
     } else {
         // User is signed out
@@ -98,14 +99,14 @@ onAuthStateChanged(auth, (user) => {
                 // Check if data is not null
                 if (data) {
                     Object.values(data).forEach(order => {
-                        var productName = order.productName;
+                        var productName = order.product;
                         var price = order.price;
                         var quantity = order.quantity;
 
                         // Create a div to display each ordered item
                         var itemDiv = document.createElement('div');
                         itemDiv.className = "item"
-                        itemDiv.innerHTML = `<img src="images/product1/l1.png" class="image" alt="Product 1">
+                        itemDiv.innerHTML = `<img src="images/Partition Plates.png" class="image" alt="Product 1">
                             <div class="item-info">
                                 <p>Product Name: ${productName}</p>
                                 <p>Price: ${price}</p>
@@ -130,3 +131,10 @@ onAuthStateChanged(auth, (user) => {
         });
     }
 });
+const logout = document.getElementById('logout')
+logout.addEventListener("click", () => {
+    auth.signOut()
+    const a = document.createElement('a')
+    a.href = "index.html"
+    a.click()
+})

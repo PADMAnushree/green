@@ -11,22 +11,18 @@ const firebaseConfig = {
     appId: "1:1098071047805:web:58fd9e6db9ce7eddb63b14"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        // User is signed in, see docs for a list of available properties
         const navDiv = document.getElementById('anchorContain');
 
-        // Array of links
         const links = [
             { text: 'Home', href: 'index.html', id: '' },
             { text: 'Products', href: 'product.html', id: '' },
             { text: 'About', href: 'aboutUs.html', id: '' },
         ];
 
-        // Create anchor tags and append them to the navigation div
         links.forEach(link => {
             const anchor = document.createElement('a');
             anchor.textContent = link.text;
@@ -40,11 +36,8 @@ onAuthStateChanged(auth, (user) => {
         });
 
     } else {
-        // User is signed out
-        // ...
         const navDiv = document.getElementById('anchorContain');
 
-        // Array of links
         const links = [
             { text: 'Home', href: 'index.html' },
             { text: 'Products', href: 'product.html', id: '' },
@@ -52,7 +45,6 @@ onAuthStateChanged(auth, (user) => {
             { text: 'Sign Up', href: 'signUp.html' }
         ];
 
-        // Create anchor tags and append them to the navigation div
         links.forEach(link => {
             const anchor = document.createElement('a');
             anchor.textContent = link.text;
