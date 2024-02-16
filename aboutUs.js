@@ -55,7 +55,8 @@ onAuthStateChanged(auth, (user) => {
             else anchor.className = 'navigate';
 
             navDiv.appendChild(anchor);
-        });
+        })
+
 
     } else {
         // User is signed out
@@ -130,3 +131,10 @@ onAuthStateChanged(auth, (user) => {
         });
     }
 });
+const logout = document.getElementById('logout')
+logout.addEventListener("click", () => {
+    auth.signOut()
+    const a = document.createElement('a')
+    a.href = "index.html"
+    a.click()
+})
