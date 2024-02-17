@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <style>
+        .background{
+            position:absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("images/background/background.jpeg");
+            filter: blur(10px);
+            background-size: cover;
+            background-position:center ;
+            z-index: -1;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Form</title>
@@ -10,7 +22,7 @@
 
 <body class="bg-gray-100 h-screen flex justify-center items-center">
 
-
+<div class="background"></div>
     <div class="bg-white p-8 rounded-lg shadow-lg w-1/2">
         <h2 class="text-2xl font-semibold mb-4">Order Form</h2>
         <form>
@@ -45,7 +57,7 @@
                 <span id="totalPrice" class="bg-gray-200 py-2 px-3 rounded-md inline-block w-full"></span>
             </div>
             <button id="submit"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+                class="bg-green-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
         </form>
     </div>
 
